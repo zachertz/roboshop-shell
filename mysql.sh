@@ -6,7 +6,9 @@ STAT() {
             echo FAILURE
           fi
           }
-echo -e "\e[32mDowloading MySQL repos file\e[om"
+
+
+echo -e "\e[33mDowloading MySQL repos file\e[0m"
 curl -s -L -o /etc/yum.repos.d/mysql.repo https://raw.githubusercontent.com/roboshop-devops-project/mysql/main/mysql.repo
 STAT $?
   echo Disable MySQL 8 version repo
