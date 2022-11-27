@@ -13,6 +13,7 @@
  id roboshop &>>$LOG
  if [ $? -ne 0 ]; then
  useradd roboshop &>>$LOG
+ fi
 STAT $?
 
 PRINT "DOWNLOAD APP CONTENT"
