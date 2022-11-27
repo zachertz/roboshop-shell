@@ -53,7 +53,7 @@ NODEJS() {
   STAT $?
 
   PRINT "SETUP SYSTEMD SERVICES"
-  mv /home/roboshop/${COMPONENT}/systemd.service /etc/systemd/system/cart.service &>>$LOG
+  mv /home/roboshop/${COMPONENT}/systemd.service /etc/systemd/system/${COMPONENT}.service &>>$LOG
   STAT $?
 
   PRINT "RELOAD SYSTEMD"
