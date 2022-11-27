@@ -1,27 +1,27 @@
  source common.sh
 
- PRINT"INSTALL NODEJS REPOS"
+ PRINT "INSTALL NODEJS REPOS"
  curl -sL https://rpm.nodesource.com/setup_lts.x | bash
  STAT $?
 
- PRINT"INSTALL NODEJS"
+ PRINT "INSTALL NODEJS"
  yum install nodejs -y
  STAT $?
 
- PRINT"ADD APPLICATION USER"
+ PRINT "ADD APPLICATION USER"
  useradd roboshop
 STAT $?
 
-PRINT"DOWNLOAD APP CONTENT"
+PRINT "DOWNLOAD APP CONTENT"
 curl -s -L -o /tmp/cart.zip "https://github.com/roboshop-devops-project/cart/archive/main.zip"
 STAT $?
 
-PRINT"REMOVE PREVIOUS VERSION OF APP"
+PRINT "REMOVE PREVIOUS VERSION OF APP"
 cd /home/roboshop
 rm -rf cart
 STAT $?
 
-PRINT"EXTRACTING APP CONTENT"
+PRINT "EXTRACTING APP CONTENT"
 unzip -o /tmp/cart.zip
 STAT $?
 
