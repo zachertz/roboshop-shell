@@ -12,6 +12,10 @@ PRINT() {
 LOG=/tmp/$COMPONENT.log
 rm -f $LOG
 
+DOWNLOAD_APP_CODE() {
+
+}
+
 NODEJS() {
   PRINT "INSTALL NODEJS REPOS"
    curl -sL https://rpm.nodesource.com/setup_lts.x | bash &>>$LOG
